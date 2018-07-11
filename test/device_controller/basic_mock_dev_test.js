@@ -5,7 +5,7 @@
 	library.
 **/
 
-var utils = require('./utils/utils');
+var utils = require('../utils/utils');
 var qRunner = utils.qRunner;
 var qExec = utils.qExec;
 var pResults = utils.pResults;
@@ -24,8 +24,12 @@ var device;
 
 exports.tests = {
 	'initialization': function(test) {
+		console.log('');
+		console.log('**** open_close_mock_dev_test ****');
+		console.log('**** No Device Required ****');
+
 		// Require the io_manager library
-		io_manager = require('../lib/io_manager');
+		io_manager = require('../../lib/io_manager');
 
 		// Require the io_interface that gives access to the ljm driver, 
 		// device controller, logger, and file_io_controller objects.

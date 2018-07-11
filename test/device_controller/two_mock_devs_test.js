@@ -1,6 +1,6 @@
 
 
-var utils = require('./utils/utils');
+var utils = require('../utils/utils');
 var qRunner = utils.qRunner;
 var qExec = utils.qExec;
 var pResults = utils.pResults;
@@ -36,9 +36,13 @@ exports.tests = {
 		callback();
 	},
 	'require io_manager': function(test) {
+		console.log('');
+		console.log('**** open_close_mock_dev_test ****');
+		console.log('**** No Device Required ****');
+
 		// Require the io_manager
 		try {
-			io_manager = require('../lib/io_manager');
+			io_manager = require('../../lib/io_manager');
 		} catch(err) {
 			stopTest(test, err);
 		}
@@ -160,7 +164,7 @@ exports.tests = {
 		// Perform the first query with
 		device_controller.getDeviceListing([{'enableMockDevices': true}])
 		.then(function(res) {
-			console.log('Data', res);
+			// console.log('Data', res);
 			test.strictEqual(res.length,2,'Device listing should not be empty');
 			test.strictEqual(res[0].serialNumber, 470010549, 'Wrong Serial Number');
 			test.strictEqual(res[1].serialNumber, 470010548, 'Wrong Serial Number');
@@ -171,6 +175,17 @@ exports.tests = {
 		device.close()
 		.then(function(res) {
 			test.strictEqual(res.comKey, 0, 'expected to receive a different comKey');
+			test.done();
+		}, function(err) {
+			console.log('Failed to close mock device', err);
+			test.ok(false, 'Failed to close mock device');
+			test.done();
+		});
+	},
+	'close mock device(2)': function(test) {
+		deviceB.close()
+		.then(function(res) {
+			test.strictEqual(res.comKey, 1, 'expected to receive a different comKey');
 			test.done();
 		}, function(err) {
 			console.log('Failed to close mock device', err);
