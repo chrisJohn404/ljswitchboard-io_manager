@@ -26,8 +26,8 @@ var testGroups = {
 	// Device Controller tests
 	'device_controller': {
 		// Mock devices, no LabJacks required.
-		'two_mock_devs_test': true,					// Passing
-		'basic_mock_dev_test': true,				// Passing
+		'two_mock_devs_test': false,				// Passing
+		'basic_mock_dev_test': false,				// Passing
 
 		// Requires LabJack devices.
 		'basic_live_test': false,					// Passing
@@ -52,7 +52,7 @@ var testGroups = {
 	},
 
 	'simple_logger': {
-		'simple_logger_basic_test': false,			// 
+		'simple_logger_basic_test': true,			// 
 	},
 };
 
