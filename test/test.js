@@ -31,12 +31,13 @@ var testGroups = {
 
 		// Requires LabJack devices.
 		'basic_live_test': false,					// Passing
+		't8_live_test': false,
 
 		'open_advanced_test': false,				// 
 		'device_keeper_test': false,				// 
 		'device_keeper_live_test': false,			// 
 		'device_errors_test': false,				// 
-		'two_dev_live_test': true,
+		'two_dev_live_test': false,
 	},
 
 	'update_mock_device_test': false,				// 

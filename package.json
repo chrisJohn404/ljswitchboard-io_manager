@@ -41,13 +41,13 @@
     "ffi": "2.3.0",
     "handlebars": "^4.4.3",
     "json-parser": "^3.1.2",
-    "labjack-nodejs": "^1.0.2",
+    "labjack-nodejs": "^1.0.3",
     "ljm-ffi": "^1.0.13",
     "ljmmm-parse": "^0.2.2",
     "ljswitchboard-data_parser": "^1.0.1",
-    "ljswitchboard-device_scanner": "^1.0.1",
-    "ljswitchboard-firmware_verifier": "^0.x",
-    "ljswitchboard-ljm_device_curator": "^1.0.3",
+    "ljswitchboard-device_scanner": "git://github.com/chrisJohn404/ljswitchboard-device_scanner.git#mock-scanning",
+    "ljswitchboard-firmware_verifier": "^1.0.0",
+    "ljswitchboard-ljm_device_curator": "git://github.com/chrisJohn404/ljswitchboard-ljm_device_curator.git#t8-integration",
     "ljswitchboard-ljm_driver_checker": "^1.0.1",
     "ljswitchboard-ljm_driver_constants": "^1.0.0",
     "ljswitchboard-ljm_special_addresses": "^1.0.0",
@@ -66,10 +66,10 @@
     "nodeunit": "0.11.3"
   },
   "custom-deps": {
-    "ljswitchboard-device_scanner": "git://github.com/chrisJohn404/ljswitchboard-device_scanner.git#fix-osx-signing",
+    "ljswitchboard-device_scanner": "git://github.com/chrisJohn404/ljswitchboard-device_scanner.git",
     "ljswitchboard-simple_logger": "^0.x",
-    "ljswitchboard-ljm_device_curator": "git://github.com/chrisJohn404/ljswitchboard-ljm_device_curator.git#fix-osx-signing",
-    "labjack-nodejs": "git://github.com/chrisJohn404/labjack-nodejs.git#fix-osx-signing",
+    "ljswitchboard-ljm_device_curator": "git://github.com/chrisJohn404/ljswitchboard-ljm_device_curator.git#t8-integration",
+    "labjack-nodejs": "git://github.com/chrisJohn404/labjack-nodejs.git",
     "ljmmm-parse": "^0.x",
     "ljswitchboard-data_parser": "^0.x",
     "ljswitchboard-firmware_verifier": "^0.x",
@@ -80,7 +80,9 @@
     "ljswitchboard-version_manager": ">=0.0.20",
     "dont delete": "do not delete"
   },
-  "old-deps": {},
+  "old-deps": {
+    "ljswitchboard-ljm_device_curator": "git://github.com/chrisJohn404/ljswitchboard-ljm_device_curator.git#fix-osx-signing"
+  },
   "directories": {
     "lib": "./lib",
     "node_binaries": "./node_binaries"
